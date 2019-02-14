@@ -37,7 +37,15 @@ namespace TaxesPaidConsole
                 }
             }
 
+            Console.WriteLine();
+            Console.WriteLine("TAXES PAID:");
+            foreach(Payer p in payers)
+            {
+                Console.WriteLine(p.Name + ": $ " + p.TaxesPaid().ToString("F2", CultureInfo.InvariantCulture));
+            }
 
+            Console.WriteLine("TOTAL TAXES:");
+            Console.WriteLine(Payer.TotalTaxes(payers).ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }

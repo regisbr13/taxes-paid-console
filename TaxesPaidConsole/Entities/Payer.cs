@@ -19,7 +19,7 @@ namespace TaxesPaidConsole.Entities
 
         public abstract double TaxesPaid();
 
-        public double TotalTaxes(List<Payer> payers)
+        public static double TotalTaxes(List<Payer> payers)
         {
             double sum = 0.0;
             foreach (Payer p in payers)
